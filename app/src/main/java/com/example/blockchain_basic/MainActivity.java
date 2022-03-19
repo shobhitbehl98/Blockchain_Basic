@@ -62,14 +62,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         new Thread(()-> runOnUiThread(()->{
             blockChain=new BlockchainManager(prefs.getPowValue(),this);
-//            Log.d("List", blockChain.blocks.size()+"\n");
-//            for(int i=0;i<blockChain.blocks.size();i++){
-//                BlockModel x=blockChain.blocks.get(i);
-//                Log.d("List", i+" "+x.index+" "+x.timestamp+" "+x.hash+"\n");
-//            }
-            if(blockChain.adapter==null){
-                Log.d("list", "phat gya");
-            }
             viewBindingContent.recyclerView.setAdapter(blockChain.adapter);
             cancelProgressDialog(progressDialog);
         })).start();
