@@ -25,7 +25,6 @@ public class BlockModel {
     public static String calculateHash_detail(BlockModel blockModel) {
 
         if(blockModel!=null){
-            Log.d("BC", "NOt null");
             MessageDigest messageDigest;
             try{
                 messageDigest=MessageDigest.getInstance("SHA-256");
@@ -102,7 +101,6 @@ public class BlockModel {
 
     public void mineBlock(int difficulty){
         nonce=0;
-        Log.d("BlockModel", "mineBlock: "+ difficulty+" "+addZeroes(difficulty)+" "+getHash());
         while(!getHash().substring(0,difficulty).equals(addZeroes(difficulty))){
             nonce++;
             hash=BlockModel.calculateHash_detail(this);

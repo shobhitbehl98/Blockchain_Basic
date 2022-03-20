@@ -5,24 +5,11 @@
     tools:context=".MainActivity">
 
     <item
-        android:id="@+id/action_pow"
-        android:orderInCategory="1"
-        android:title="Proof of BlockChain"
-        app:showAsAction="never"/>
-    <item
         android:id="@+id/action_encrypt"
+        android:checkable="true"
         android:orderInCategory="2"
         android:title="Encrypt Message"
-        android:checkable="true"
-        android:actionLayout="@layout/switch_layout"
-        app:showAsAction="never"/>
-    <item
-        android:id="@+id/action_dark"
-        android:orderInCategory="3"
-        android:title="Dark Theme"
-        android:checkable="true"
-        android:actionLayout="@layout/switch_layout"
-        app:showAsAction="never"/>
+        app:showAsAction="never" />
     <item
         android:id="@+id/action_exit"
         android:orderInCategory="4"
